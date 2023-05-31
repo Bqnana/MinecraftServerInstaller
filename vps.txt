@@ -1,5 +1,7 @@
 set -e
 
+# Use this script to make the script function! bash <(curl -s 
+
 echo -e "######################################################################################"
 echo -e "#                                                                                    #"
 echo -e "# Project 'MinecraftServerinstaller'                                                 #"
