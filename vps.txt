@@ -1,6 +1,6 @@
 set -e
 
-# Use this script to make the script function! bash <(curl -s 
+# Use this script to make the script function! bash <(curl -s https://raw.githubusercontent.com/Bqnana/MinecraftServerInstaller/main/vps.txt)
 
 echo -e "######################################################################################"
 echo -e "#                                                                                    #"
