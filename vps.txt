@@ -17,7 +17,7 @@ echo -e "#   Remember! If something happens, It is not for me to handle         
 echo -e "#   It is completely only for you if the install breaks.                             #"
 echo -e "######################################################################################"
 echo -e "Installing Java..."
-apt install openjdk-17-jre
+apt install default-jre
 echo -e "Installing Minecraft Server..."
 mkdir -p /minecraft && cd /minecraft
 echo -e eula=true> eula.txt
