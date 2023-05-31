@@ -1,1 +1,25 @@
-echo -e hello
+set -e
+
+echo -e "######################################################################################"
+echo -e "#                                                                                    #"
+echo -e "# Project 'MinecraftServerinstaller'                                                 #"
+echo -e "#                                                                                    #"
+echo -e "# Copyright (C) 2023-2025 panel@phantomhosting.com                                   #"
+echo -e "#                                                                                    #"
+echo -e "#   This program is free software: you can redistribute it and/or modify             #"
+echo -e "#   it under the terms of the GNU General Public License as published by             #"
+echo -e "#   the Free Software Foundation, either version 3 of the License, or                #"
+echo -e "#   (at your option) any later version.                                              #"
+echo -e "#                                                                                    #"
+echo -e "#   Remember! If something happens, It is not for me to handle                       #"
+echo -e "#   It is completely only for you if the install breaks.                             #"
+echo -e "######################################################################################"
+
+echo -e "Installing Java..."
+sudo apt install -y openjdk-17-jre-headless
+echo -e "Installing Minecraft Server..."
+mkdir -p /minecraft && cd /minecraft
+echo -e eula=true> eula.txt
+curl https://api.papermc.io/v2/projects/paper/versions/1.19.4/builds/542/downloads/paper-1.19.4-542.jar -o server.jar
+echo -e "Starting Minecraft Server..."
+java -Xms128M -Xmx8192M -jar server.jar
